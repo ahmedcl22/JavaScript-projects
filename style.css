@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#photo-container *{
+    display: block;
+    margin: 10px 0;
+    position: relative;
+}
+#photo-container input{
+    width: 300px;
+    padding: 5px 10px;
+}
+#photo-container button{
+    background-color:#F3D110;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 600;
+    color:#3F2612;
+}
+#photo-container .overtext{
+    position: absolute;
+    top: 100px;
+    left: 70px;
+    color:aliceblue;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
