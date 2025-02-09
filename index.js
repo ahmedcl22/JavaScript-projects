@@ -1,27 +1,22 @@
-const tab1=document.getElementById("tab1");
-const tab2=document.getElementById("tab2");
-const tabBtn=document.getElementById("tabBtn");
-const box=document.getElementById("box");
-const photoContainer=document.getElementById("photo-container");
-tabBtn.onclick=function(){
-    if(tab2.checked){
-        box.style.display="flex"
-    }else if(tab1.checked){
-        box.style.display="none"
+const textBox =document.getElementById("textBox");
+const toFahrenheit= document.getElementById("toFahrenheit");
+const toCelsius =document.getElementById("toCelsius");
+const result = document.getElementById("result");
+let temp;
+function convert(){
+    if(toFahrenheit.checked){
+        temp=Number(textBox.value);
+        temp=temp*9/5+32;
+        result.textContent=temp.toFixed(1)+"F"
+
     }
-}
+    else if(toCelsius.checked){
+        temp=Number(textBox.value);
+        temp=(temp-32)*(5/9);
+        result.textContent=temp.toFixed(1)+"C"
+    }
+    else{
+        result.textContent="Select a unit";
+    }
 
-
-
-
-
-
-
-
-const overtext=document.getElementById("overtext");
-const userText=document.getElementById("userText");
-const submitBtn=document.getElementById("submitBtn");
-
-submitBtn.onclick=function(){
-    overtext.textContent=userText.value;
 }
